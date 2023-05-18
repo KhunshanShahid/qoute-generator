@@ -1,0 +1,108 @@
+body{
+    background-color: #2f1fab !important; 
+}
+.cardBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 87vh;
+    background-color: #2f1fab !important;  
+} .searchBar{
+    width: 50%;
+    margin: 1rem auto;
+    padding: 0.7rem 0.3rem;
+    font-size: 1.3rem;
+    text-align: center;
+} 
+ .addQouteForm{
+    width: 97%;
+    height: 67vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 0.3rem;
+    font-size: 1.3rem;
+    text-align: center;
+} .addBtn{
+    width: 30%;
+    margin: 1rem auto;
+    padding: 0.7rem 0.3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #4432cd;
+    color: white;
+}
+.addBtn:hover{
+    background-color: #a79df6;
+    color: black;
+    padding: 1rem 0.3rem;
+    transition: 0.3s;
+
+ } 
+ .NewBtn{ 
+    margin-top: 0.5rem;
+    width: 50%;
+    padding: 1rem 2rem;
+    background-color: white;
+    color:  #2f1fab;
+    font-size: 1rem;
+}
+.NewBtn:hover{
+    background-color:  #5a50a6;
+    color:  white;
+    cursor: pointer;
+} 
+
+ .qouteBox{
+    background-color: white;
+    height: 18rem;
+    width: 100%;
+    margin: 10px;
+    border-radius: 0.5rem;
+    padding: 1.4rem 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+
+
+    .Author{
+        display:flex;
+     justify-content:center;
+     width: 70%;
+     margin-bottom: 0.6rem;
+     font-size: 1.2rem;
+    }
+    .card {
+       display: flex;
+    /* flex-wrap: wrap; */
+       width: 100%;
+       height: 80%;
+       
+     margin-top: 2rem;
+      
+    }
+    .mainQoute{
+        width: 80%;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+    .deleteBtn{
+        width: 60%;
+    }
+   
+    @media only screen and (max-width: 600px) {
+        .card {
+            display: flex;
+         flex-direction: column;
+            width: 100%;
+            height: 50%;
+            flex-wrap: wrap;
+          margin-top: 2rem;
+           
+         }
+      }

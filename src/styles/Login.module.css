@@ -1,0 +1,54 @@
+.loginbox{
+   width: 27%;
+   height: 70%; 
+   background-color: white;
+   padding: 1.3rem 0.9rem;
+   border-radius: 0.7rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+.loginHeading{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem ;
+}
+.formBox{
+    display:flex;
+     flex-direction:column;
+     padding: 3rem 0rem;
+     justify-content: space-around;
+     height: 40%;
+     align-items: center;
+}
+.formInput{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 80%;
+    padding: 1rem 0.3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+.formBtn{
+    width: 30%;
+    background-color: #4432cd;
+    color: white;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 1.2rem 1.3rem;
+    margin-top: 1rem;
+}
+.formBtn:hover{
+    background-color: #a79df6;
+    color: black;
+
+}
+.inptLabel{
+    text-align: left;
+    width: 90%;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+}
