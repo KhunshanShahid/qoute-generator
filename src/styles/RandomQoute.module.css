@@ -1,0 +1,55 @@
+.cardBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: #2f1fab;
+    padding: 1.3rem;
+  }
+  
+  .qouteBox {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.4rem 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+  }
+  
+  .mainQoute {
+    width: 90%;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+  
+  .Author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .NewBtn {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 7rem;
+    background-color: white;
+    color: #2f1fab;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .NewBtn:hover {
+    background-color: #5a50a6;
+    color: white;
+    cursor: pointer;
+  }
+  

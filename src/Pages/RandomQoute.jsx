@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import styles from '../styles/Card.module.css'
+import styles from '../styles/RandomQoute.module.css'
 import Loader from './Loader'
 import { SocialIcon } from 'react-social-icons'
 
@@ -30,15 +30,12 @@ export default function Exchange() {
     setLoader(false)
     setAPIData(false)
     }
-
-   
   }, [APIData])
 
   const changeQoute =()=>{
     setMyQoute(!qoute)
-   
-   
   }
+
 useEffect(()=>{
   let product= localStorage.getItem("Qoutations")
   product = JSON.parse(product)
@@ -60,7 +57,7 @@ useEffect(()=>{
             <SocialIcon url="https://facebook.com/jaketrent" />
           </div>
           <div>
-           <b> ~{product.author? product.author:'UnKnown'  }</b>
+           <b> ~{product.author? product.author:'UnKnown'}</b>
             <div>
             </div>
           </div>

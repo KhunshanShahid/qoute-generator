@@ -1,55 +1,63 @@
-import React, { useEffect, useState } from "react";
-import styles from "../styles/homeStyle.module.css";
-import LoginStyles from "../styles/Login.module.css";
-import { useDispatch } from "react-redux";
-import { login } from "../redux/action/Action";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import styles from "../styles/homeStyle.module.css"
+import LoginStyles from "../styles/Login.module.css"
+import { useDispatch } from "react-redux"
+import { login } from "../redux/action/Action"
+import { useNavigate } from "react-router-dom"
 import { toast } from 'react-toastify'
 
 export default function Login() {
-  const [data, setData] = useState({});
-  const [username, setUserName] = useState();
+  const [data, setData] = useState({})
+  const [username, setUserName] = useState()
   const [user, setUser] = useState([
     {
       email: "",
       password: "",
     },
-  ]);
+  ])
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   useEffect(() => {
-    let product = localStorage.getItem(`Qoute-${username}`);
+    let product = localStorage.getItem(`Qoute-${username}`)
     if (product) {
-      product = JSON.parse(product);
-      setData(product);
+      product = JSON.parse(product)
+      setData(product)
     }
-  }, [username]);
+  }, [username])
   const UserHandler = (e) => {
-    setUserName(e.target.value);
-  };
+    setUserName(e.target.value)
+  }
   const formHandler = (e) => {
-    e.preventDefault();
-
-    if (data && data.email === user.email && data.password === user.password) {
-      dispatch(login(username));
-      navigate("/user");
-      toast.success('Login Successful')
+    e.preventDefault()
+    if (username && user.email && user.password) {
+      if (data && data.email === user.email && data.password === user.password) {
+        dispatch(login(username))
+        navigate("/user")
+        toast.success('Login Successful')
+        setUser({
+          email: "",
+          password: "",
+        })
+        setUserName("")
+      } else {
+        toast.warning('Invalid Login or Password')
+      }
     } else {
-      toast.warning('Invalid Login or Password')
+      if (!username) {
+        toast.warning("Please enter a username")
+      } else if (!user.email) {
+        toast.warning("Please enter an email")
+      } else if (!user.password) {
+        toast.warning("Please enter a password")
+      }
     }
-
-    setUser({
-      name: "",
-      email: "",
-      password: "",
-    });
-    setUserName("");
-  };
+ 
+  }
   const dataHandler = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+    setUser({ ...user, [e.target.name]: e.target.value })
+  }
 
   return (
     <div>
@@ -101,5 +109,5 @@ export default function Login() {
         </div>
       </div>
     </div>
-  );
+  )
 }
