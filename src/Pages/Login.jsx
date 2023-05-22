@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
 import styles from "../styles/homeStyle.module.css"
 import LoginStyles from "../styles/Login.module.css"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { login } from "../redux/action/Action"
 import { useNavigate } from "react-router-dom"
 import { toast } from 'react-toastify'
+
 
 
 export default function Login() {
@@ -19,6 +20,17 @@ export default function Login() {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  const isLogged = useSelector((state) => state.isLoggedIn);
+  const localLogin = JSON.parse(localStorage.getItem("login"))
+  const myName = JSON.parse(localStorage.getItem("myName"))
+  useEffect(()=>{
+console.log(isLogged)
+console.log(localLogin,"local storage")
+if(localLogin){
+  dispatch(login(myName))
+  navigate('/user')
+}})
 
   useEffect(() => {
     let product = localStorage.getItem(`Qoute-${username}`)
@@ -38,6 +50,7 @@ export default function Login() {
         navigate("/user")
         toast.success('Login Successful')
         localStorage.setItem("login",JSON.stringify(true))
+        localStorage.setItem("myName",JSON.stringify(username))
         setUser({
           email: "",
           password: "",

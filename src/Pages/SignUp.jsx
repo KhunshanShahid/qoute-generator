@@ -3,8 +3,11 @@ import styles from "../styles/homeStyle.module.css";
 import LoginStyles from "../styles/Login.module.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+
+  const navigate = useNavigate()
   const [user, setUser] = useState([
     {
       name: "",
@@ -23,6 +26,7 @@ const SignUp = () => {
         email: "",
         password: "",
       });
+      navigate('/login')
     } else {
       if (user.name.length <= 4) {
         toast.warning("Name should have more than 4 characters");
