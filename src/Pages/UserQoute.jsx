@@ -9,8 +9,8 @@ const UserQoute = () => {
 
   const [userQoute, setuserQoute] = useState([
     {
-      text: "Sometimes all you need is help",
-      author: "khunshan",
+      text: "Sometimes when you're in a dark place you think you've been buried, but you've actually been planted.",
+      author: "Christine Cane",
     },
   ])
   const [saveQoute, setsaveQoute] = useState([
@@ -41,14 +41,14 @@ const UserQoute = () => {
     } else {
       setuserQoute([
         {
-          text: "Sometimes all you need is help",
-          author: "khunshan",
+          text: "Sometimes when you're in a dark place you think you've been buried, but you've actually been planted.",
+          author: "Christine Cane",
         },
       ])
       setFilterQoute([
         {
-          text: "Sometimes all you need is help",
-          author: "khunshan",
+          text: "Sometimes when you're in a dark place you think you've been buried, but you've actually been planted.",
+          author: "Christine Cane",
         },
       ])
     }

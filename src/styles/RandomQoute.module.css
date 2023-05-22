@@ -1,55 +1,125 @@
-.cardBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-    background-color: #2f1fab;
-    padding: 1.3rem;
-  }
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #2f1fab;
+}
+
+.controlPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inputContainer {
+  display: flex;
   
+  align-items: center;
+  
+}
+
+.inputField {
+  margin-right: 10px;
+  padding: 0.6rem 4rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.qouteBox {
+  background-color: white;
+  width: 100%;
+  margin: 10px;
+  border-radius: 4px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.mainQoute {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  height: 6rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.copyBtn {
+  width: 100%;
+  margin-top: 0.6rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #4432cd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copyBtn:hover {
+  background-color: #a79df6;
+}
+
+.newBtn {
+  width: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #4432cd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newBtn:hover {
+  background-color: #a79df6;
+}
+
+@media (min-width: 576px) {
+  .cardContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .qouteBox {
-    background-color: white;
-    border-radius: 0.5rem;
-    padding: 1.4rem 0.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-    height: auto;
-    margin: auto;
+    width: calc(50% - 20px);
+    margin: 10px;
   }
-  
-  .mainQoute {
-    width: 90%;
-    font-size: 1.4rem;
-    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .qouteBox {
+    width: calc(33.33% - 20px);
+    margin: 10px;
   }
-  
-  .Author {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  .qouteBox {
+    width: calc(25% - 20px);
+    margin: 10px;
   }
-  
-  .NewBtn {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 400px;
-    padding: 1rem 7rem;
-    background-color: white;
-    color: #2f1fab;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .NewBtn:hover {
-    background-color: #5a50a6;
-    color: white;
-    cursor: pointer;
-  }
-  
+}

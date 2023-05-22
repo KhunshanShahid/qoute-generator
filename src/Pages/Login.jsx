@@ -6,6 +6,7 @@ import { login } from "../redux/action/Action"
 import { useNavigate } from "react-router-dom"
 import { toast } from 'react-toastify'
 
+
 export default function Login() {
   const [data, setData] = useState({})
   const [username, setUserName] = useState()
@@ -36,13 +37,14 @@ export default function Login() {
         dispatch(login(username))
         navigate("/user")
         toast.success('Login Successful')
+        localStorage.setItem("login",JSON.stringify(true))
         setUser({
           email: "",
           password: "",
         })
         setUserName("")
       } else {
-        toast.warning('Invalid Login or Password')
+        toast.error('Invalid Login or Password')
       }
     } else {
       if (!username) {
