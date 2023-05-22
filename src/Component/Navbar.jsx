@@ -12,10 +12,17 @@ export default function Navbar() {
   const myName = JSON.parse(localStorage.getItem("myName"));
   useEffect(() => {
     const myLogin = JSON.parse(localStorage.getItem("login"));
-    if (myLogin) {
-      dispatch(login(myName));
+    if(myName){
+      if ( myLogin ) {
+        dispatch(login(myName));
+      }
+      else{
+        dispatch(logout());
+        navigate("/");
+      }
     }
-  });
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[myName]);
   const logOutHandle = () => {
     const confirmLogout = window.confirm("Are you sure you want to logout?");
     if (confirmLogout) {
