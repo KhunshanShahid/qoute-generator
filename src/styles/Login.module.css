@@ -1,0 +1,64 @@
+.loginbox {
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .loginHeading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inptLabel {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .formInput {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+  }
+  
+  .formBtn {
+    background-color: #2f1fab;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formBtn:hover {
+    background-color: #463896;
+  }
+  
+ 
+  
